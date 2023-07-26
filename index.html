@@ -26,6 +26,7 @@
             colors: {
               clifford: "#da373d",
               custom: "#F85559",
+              'custom-gray': 'rgba(18, 18, 18, 0.10)',
             },
           },
         },
@@ -33,9 +34,9 @@
     </script>
   </head>
   <body class="bg-stone-50">
-    <header>
-      <nav class="flex justify-between text-black bg-custom">
-        <ul class="flex gap-5">
+    <header class="lg:w-[80%] mx-auto pt-5">
+      <nav class="flex justify-around items-center text-white lg:bg-custom p-3 rounded-full">
+        <ul class="lg:flex gap-5 hidden lg:inline">
           <li>Home</li>
           <li>About Us</li>
           <li>Shop</li>
@@ -43,60 +44,129 @@
         </ul>
         <div class="flex items-center">
           <img src="/images/logo.png" alt="" />
-          <span>Fruit Burst</span>
+          <span class="ml-1">Fruit Burst</span>
         </div>
-        <div class="relative">
+        <div class="relative hidden lg:inline">
           <input
             type="text"
             placeholder="Search"
-            class="px-3 bg-white border"
+            class="py-3 px-8 bg-white border rounded-full"
           />
-          <button class="absolute top-1 right-1">
+          <button class="absolute top-5 right-5 text-black">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
+        <div class="dropdown mr-10 lg:hidden">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-custom rounded-box w-20">
+            <li class="m-2"><a>Home</a></li>
+            <li class="m-2"><a>About Us</a></li>
+            <li class="m-2"><a>Shop</a></li>
+            <li class="m-2"><a>All Fruits</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main class="container md:mx-auto px-4">
-      <section>
+
+    <main class=" lg:w-[80%] mx-auto px-4">
+
+      <!-- carousel -->
+      <section class="mt-10 mb-16">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div class="absolute top-0 right-0 overlay flex flex-col items-center justify-center leading-10">
+              <h1 class="text-white text-2xl lg:text-4xl font-bold ">Exotic tastes at your doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button class="btn bg-custom border-custom text-white">Shop Now</button>
+            </div>
+            <img src="/images/banner1.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide2" class="carousel-item relative w-full">
+            <div class="absolute top-0 right-0 overlay flex flex-col items-center justify-center leading-10">
+              <h1 class="text-white text-2xl lg:text-4xl font-bold ">Exotic tastes at your doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button class="btn bg-custom border-custom text-white">Shop Now</button>
+            </div>
+            <img src="/images/banner2.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide3" class="carousel-item relative w-full">
+            <div class="absolute top-0 right-0 overlay flex flex-col items-center justify-center leading-10">
+              <h1 class="text-white text-2xl lg:text-4xl font-bold ">Exotic tastes at your doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button class="btn bg-custom border-custom text-white">Shop Now</button>
+            </div>
+            <img src="/images/banner3.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide4" class="carousel-item relative w-full">
+            <div class="absolute top-0 right-0 overlay flex flex-col items-center justify-center leading-10">
+              <h1 class="text-white text-2xl lg:text-4xl font-bold ">Exotic tastes at your doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button class="btn bg-custom border-custom text-white">Shop Now</button>
+            </div>
+            <img src="/images/banner4.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class=" lg:mt-40">
         <!-- daily deal countdown -->
         <div
           class="flex flex-col gap-6 lg:flex-row lg:justify-between text-black mb-8"
         >
           <div class="lg:w-[40%] text-center lg:text-left">
-            <h1 class="text-4xl font-bold">Deal of the day</h1>
+            <h1 class="text-4xl font-bold mb-3">Deal of the day</h1>
             <p>
               Contrary to popular belief, is not simply random text. It has
               roots in a piece of classical Latin literature from 45 BC, making
               it over 2000 years old.
             </p>
           </div>
-          <div>
+          <div class="mx-auto lg:mx-0">
             <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
               <div class="flex flex-col">
                 <span class="countdown font-mono text-5xl">
-                  <span style="--value: 15"></span>
+                  <span style="--value: 29"></span>
                 </span>
                 days
               </div>
               <div class="font-black">:</div>
               <div class="flex flex-col">
                 <span class="countdown font-mono text-5xl">
-                  <span style="--value: 10"></span>
+                  <span style="--value: 15"></span>
                 </span>
                 hours
               </div>
               <div class="font-black">:</div>
               <div class="flex flex-col">
                 <span class="countdown font-mono text-5xl">
-                  <span style="--value: 24"></span>
+                  <span style="--value: 25"></span>
                 </span>
-                min
+                Minutes
               </div>
               <div class="font-black">:</div>
               <div class="flex flex-col">
                 <span class="countdown font-mono text-5xl">
-                  <span style="--value: 15"></span>
+                  <span style="--value: 08"></span>
                 </span>
                 sec
               </div>
@@ -112,6 +182,7 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title text-black">12.90$ - 18.85$</h2>
+              <div class="border border-custom-gray w-40"></div>
               <p>Apple</p>
               <div class="rating">
                 <input
@@ -152,6 +223,7 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title text-black">12.90$ - 18.85$</h2>
+              <div class="border border-custom-gray w-40"></div>
               <p>Orange</p>
               <div class="rating">
                 <input
@@ -192,6 +264,7 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title text-black">12.90$ - 18.85$</h2>
+              <div class="border border-custom-gray w-40"></div>
               <p>Red Dragon</p>
               <div class="rating">
                 <input
@@ -232,6 +305,7 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title text-black">12.90$ - 18.85$</h2>
+              <div class="border border-custom-gray w-40"></div>
               <p>Banana</p>
               <div class="rating">
                 <input
@@ -276,7 +350,7 @@
       </section>
 
       <!-- our team -->
-      <section class="flex flex-col items-center text-black">
+      <section class="flex flex-col items-center text-white team-container py-20 mt-20">
         <div class="text-center my-10">
           <h1 class="text-2xl font-bold">Meet the team section</h1>
           <p class="w-[60%] mx-auto">
@@ -285,7 +359,7 @@
             2000 years old.
           </p>
         </div>
-        <div class="flex gap-20">
+        <div class="flex gap-20 flex-col lg:flex-row md:grid md:grid-cols-2">
           <div class="flex flex-col items-center">
             <img src="/images/member1.png" alt="" />
             <p class="mt-3">Awlad Hossain</p>
@@ -357,7 +431,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-8"
             >
               <div class="bg-slate-300 p-3 rounded-full">
                 <i class="fa-regular fa-heart"></i>
@@ -372,7 +446,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-8"
             >
               <div class="bg-slate-300 p-3 rounded-full">
                 <i class="fa-solid fa-gift"></i>
@@ -388,7 +462,7 @@
             </div>
           </div>
           <div class="order-first">
-            <img src="/images/whychoose1.png" alt="" />
+            <img src="/images/whychoose1.png" alt="" class="md:w-[100%]" />
           </div>
           <div>
             <div
@@ -407,7 +481,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-8"
             >
               <div class="lg:text-right order-last lg:order-first text-center">
                 <h1 class="text-xl font-bold">Sustainable Practice</h1>
@@ -422,7 +496,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-8"
             >
               <div class="lg:text-right order-last lg:order-first text-center">
                 <h1 class="text-xl font-bold">The Benefits Only</h1>
