@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <!-- adding fontawsome -->
     <script
       src="https://kit.fontawesome.com/b0b8a2f814.js"
@@ -32,11 +33,36 @@
     </script>
   </head>
   <body class="bg-stone-50">
-    <header></header>
+    <header>
+      <nav class="flex justify-between text-black bg-custom">
+        <ul class="flex gap-5">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Shop</li>
+          <li>All Fruits</li>
+        </ul>
+        <div class="flex items-center">
+          <img src="/images/logo.png" alt="" />
+          <span>Fruit Burst</span>
+        </div>
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search"
+            class="px-3 bg-white border"
+          />
+          <button class="absolute top-1 right-1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
     <main class="container md:mx-auto px-4">
       <section>
         <!-- daily deal countdown -->
-        <div class="flex flex-col gap-6 lg:flex-row lg:justify-between text-black mb-8">
+        <div
+          class="flex flex-col gap-6 lg:flex-row lg:justify-between text-black mb-8"
+        >
           <div class="lg:w-[40%] text-center lg:text-left">
             <h1 class="text-4xl font-bold">Deal of the day</h1>
             <p>
@@ -243,13 +269,175 @@
         </div>
 
         <div class="text-center my-4">
-          <button class="btn bg-custom border-custom text-white">Shop all</button>
+          <button class="btn bg-custom border-custom text-white">
+            Shop all
+          </button>
         </div>
       </section>
 
-      <!-- team info -->
-      <section class="team-container">
+      <!-- our team -->
+      <section class="flex flex-col items-center text-black">
+        <div class="text-center my-10">
+          <h1 class="text-2xl font-bold">Meet the team section</h1>
+          <p class="w-[60%] mx-auto">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <div class="flex gap-20">
+          <div class="flex flex-col items-center">
+            <img src="/images/member1.png" alt="" />
+            <p class="mt-3">Awlad Hossain</p>
+            <p>Fruits Expert</p>
+            <ul class="flex gap-2 mt-2 text-custom">
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="/images/member2.png" alt="" />
+            <p class="mt-3">Safia Chowdhury</p>
+            <p>Fruits Expert</p>
+            <ul class="flex gap-2 mt-2 text-custom">
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="/images/member3.png" alt="" />
+            <p class="mt-3">Rokib Hossain</p>
+            <p>Fruits Expert</p>
+            <ul class="flex gap-2 mt-2 text-custom">
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="/images/member4.png" alt="" />
+            <p class="mt-3">Chaity</p>
+            <p>Fruits Expert</p>
+            <ul class="flex gap-2 mt-2 text-custom">
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <!-- Why chose us -->
+      <section class="flex flex-col text-black items-center mt-10">
+        <div class="text-center my-8">
+          <h1 class="font-bold text-2xl">Why Choose Us</h1>
+          <p class="w-[60%] mx-auto">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 my-10">
+          <div class="lg:order-first">
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mb-3"
+            >
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="text-center lg:text-left">
+                <h1 class="text-xl font-bold">Dedicated Team</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+            >
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="text-center lg:text-left">
+                <h1 class="text-xl font-bold">Fresh is Best</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+            >
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-solid fa-gift"></i>
+              </div>
+              <div class="text-center lg:text-left">
+                <h1 class="text-xl font-bold">Git Certificates</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="order-first">
+            <img src="/images/whychoose1.png" alt="" />
+          </div>
+          <div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-8 lg:mt-0"
+            >
+              <div class="lg:text-right order-last lg:order-first text-center">
+                <h1 class="text-xl font-bold">Integrated Supplier</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-solid fa-boxes-packing"></i>
+              </div>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+            >
+              <div class="lg:text-right order-last lg:order-first text-center">
+                <h1 class="text-xl font-bold">Sustainable Practice</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-solid fa-ice-cream"></i>
+              </div>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-4 leading-8 mt-16"
+            >
+              <div class="lg:text-right order-last lg:order-first text-center">
+                <h1 class="text-xl font-bold">The Benefits Only</h1>
+                <hr />
+                <p>
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <div class="bg-slate-300 p-3 rounded-full">
+                <i class="fa-regular fa-thumbs-up"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="bg-black py-16 text-white">
