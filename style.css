@@ -2,7 +2,9 @@
     background-image: url('/images/team.png');
     background-size: cover;
     background-position: center;
-    position: relative;
+}
+.team-container > div{
+    background-color: rgba(0, 0, 0, 0.227);
 }
 .overlay{
     background-color: rgba(0, 0, 0, 0.562);
